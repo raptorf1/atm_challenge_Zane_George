@@ -20,18 +20,26 @@ In order to work in a test driven way
 I want to unit test my code
 
 
-As a User       
- In order to make an withdrawal      
- The ATM needs to have funds
+[DONE] As a User       
+ In order to make an withdrawal     The ATM needs to have funds
  * Need to have an ATM class
  * ATM needs to have funds
  * ATM can give up to $1000
  * Need to have a withdraw method
 
  As a User               
-In order to know if my withdrawal was successful or unsuccessful               
-I want to receive a message with my withdrawal details
+In order to know if my withdrawal was successful or unsuccessful      I want to receive a message with my withdrawal details
 * Boolean method that determines if withdrawal is successful
 * Method that creates status message
 * Method that defines the banknotes withdrawn
 * Details have to be generated in a hash
+
+As an ATM operator          
+In order for the right person to make a withdrawal            
+I want each person to have an separate account
+* Create Account class
+
+
+As a ATM operator           
+In order ensure that an Acccount holder can only withdraw funds that he has balance for           
+I want to allow a withdrawal only if there are sufficient funds in the account
