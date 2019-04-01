@@ -27,3 +27,11 @@ As a User
  * ATM needs to have funds
  * ATM can give up to $1000
  * Need to have a withdraw method
+
+ As a User               
+In order to know if my withdrawal was successful or unsuccessful               
+I want to receive a message with my withdrawal details
+* Boolean method that determines if withdrawal is successful
+* Method that creates status message
+* Method that defines the banknotes withdrawn
+* Details have to be generated in a hash
