@@ -1,5 +1,44 @@
 ## ATM Challenge Craft Academy Week 1
 
+### Problem Statement
+Bank customers, in need of cash, would benefit from being able to get cash in a quick yet secure way. Getting cash should be possible without limitations of Bank office opening hours.
+
+### User Stories
+* As a customer,
+in order to withdraw money,
+I need to have a card.
+* As a customer,
+in order to have a safe withdrawal,
+I need my card to have a pin.
+* As a customer,
+in order to withdraw money,
+I must enter an amount at will.
+* As an ATM,
+in order to give out the desired amount to the correct customer,
+I must verify the validity of the customer's pin number.
+* As an ATM,
+in order to give out the desired amount,
+I must verify if the customer has an active account.
+* As an ATM,
+in order to give out the desired amount,
+I must have enough funds.
+* As an ATM,
+in order to give out the desired amount,
+I must verify if the customer has enough funds in his account.
+* As an ATM,
+in order to inform the customer,
+I need to display a message in all instances.
+
+
+
+
+
+
+
+
+
+
+
 The following objectives must be met:
 
     An ATM machine can hold up to $1000
@@ -51,3 +90,5 @@ I need make sure that we only allow withdrawals if there are funds available
 As a Customer              
 In order to keep my funds secure             
 I want a secure Pin code & an expiry date on my card that allows only me access to my funds
+
+
