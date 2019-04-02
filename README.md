@@ -6,28 +6,67 @@ Bank customers, in need of cash, would benefit from being able to get cash in a 
 ### User Stories
 * As a customer,
 in order to withdraw money,
-I need to have a card.
+I need to have an account.
+- Define account class
+- Define customer class
+
 * As a customer,
 in order to have a safe withdrawal,
-I need my card to have a pin.
+I need my account to have a pin.
+- Give a pin instance variable to the account class
+
+* As an ATM,
+in order to perform a safe withdrawal,
+I need to request a pin from the
+customer and check its validity.
+- Define ATM class
+- Define a withdraw method for the ATM class
+- Give the withdraw method the pin parameter from the account class
+- Withdraw method should output a message depending on the validity of the pin
+
 * As a customer,
 in order to withdraw money,
 I must enter an amount at will.
-* As an ATM,
-in order to give out the desired amount to the correct customer,
-I must verify the validity of the customer's pin number.
+- Pass the amount as argument to the withdraw method
+
 * As an ATM,
 in order to give out the desired amount,
 I must verify if the customer has an active account.
+- Give the account_status instance variable to the account class
+- Pass the account_status as an argument to the withdraw method
+- Create a new private method under the ATM class to check the account_status
+
 * As an ATM,
 in order to give out the desired amount,
 I must have enough funds.
+- Create an instance variable funds for the ATM class that equals the maximum amount the ATM can hold
+- Create a private method under the ATM class to check the ATM funds at any given moment
+
 * As an ATM,
 in order to give out the desired amount,
 I must verify if the customer has enough funds in his account.
+- Give the account class the balance instance variable
+- Create a private method under the ATM class that checks the account balance
+
 * As an ATM,
 in order to inform the customer,
 I need to display a message in all instances.
+- Write a case statement inside the withdraw method
+- Add a when condition inside the case statement that determines the message for insufficient_funds_in_account
+- Add a when condition inside the case statement that determines the message for insufficient_funds_in_ATM
+- Add a when condition inside the case statement that determines the message for incorrect_pin
+- Add a when condition inside the case statement that determines the message for card_expired
+- Add a when condition inside the case statement that determines the message for account_disabled
+- Add a when condition inside the case statement that determines the message for successful_transaction
+
+* As an ATM,
+in order to dispense cash,
+I need to know how many and what kind of reserves I have available at the
+moment.
+
+* As an ATM,
+in order to dispense cash,
+I need to give out the desired amount in 20, 10 & 5 bills.
 
 
 
@@ -88,7 +127,9 @@ In order for our costumers to withdraw funds
 I need make sure that we only allow withdrawals if there are funds available
 
 As a Customer              
-In order to keep my funds secure             
-I want a secure Pin code & an expiry date on my card that allows only me access to my funds
+In order to keep my funds secure        I want a secure Pin code & an expiry date on my card that allows only me access to my funds
 
+As an Bank Customer    
+In order to withdraw funds in even amounts  
+I want to receive funds in 5, 10 & 20$ bills
 
