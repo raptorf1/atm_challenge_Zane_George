@@ -8,7 +8,10 @@ class Account
         @account_status = :active
     end
 
-    
+    def deactivate
+        @account_status = :deactivated
+    end
+
     
     private
 
@@ -17,5 +20,5 @@ class Account
         stringedDate[5]+stringedDate[6]+"-"+stringedDate[2]+stringedDate[3]
     end
 
-
+    
 end
