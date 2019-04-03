@@ -33,4 +33,8 @@ describe Account do
         expect(subject.account_status).to eq :deactivated    
     end
 
+    it "has balance of 0 at creation" do
+        expect(subject.balance).to eq 0
+    end
+
 end
