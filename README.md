@@ -4,41 +4,57 @@
 Bank customers, in need of cash, would benefit from being able to get cash in a quick yet secure way. Getting cash should be possible without limitations of Bank office opening hours.
 
 ### User Stories
-* As a customer,
-in order to withdraw money,
+
+```
+As a customer,
+In order to access my funds
 I need to have an account.
+```
 - Define account class
-- Define customer class
+- Add attributes: account number, account holder, pin_num, exp_date ......
 
-* As a customer,
-in order to have a safe withdrawal,
-I need my account to have a pin.
-- Give a pin instance variable to the account class
 
-* As an ATM,
-in order to perform a safe withdrawal,
-I need to request a pin from the
-customer and check its validity.
-- Define ATM class
-- Define a withdraw method for the ATM class
-- Give the withdraw method the pin parameter from the account class
-- Withdraw method should output a message depending on the validity of the pin
+```
+As a customer,
+In order to safely access my account,
+I need my account to have a unique pin code.
+```
+- Add pin attribute to account class
 
-* As a customer,
-in order to withdraw money,
-I must enter an amount at will.
-- Pass the amount as argument to the withdraw method
+```
+As an ATM-operator,
+In order to let customers safely access their account,
+I need to verify the customers pin code, card exp date and account status. 
+```
+- Add method to verify `pin_code`, `exp_date` and `account_status`
+- Add message for successful and unsuccessful withdrawals and reason
 
-* As an ATM,
+```
+As a customer,
+In order for me to withdraw funds from my account
+I would like to enter an amount, pin code and receive cash and a /successfl withdrawal message.  
+```
+
+- Create withdraw method
+- Add attributes funds, pin code, amount
+- Add successful withdrawal message
+
+```
+As an ATM,
 in order to give out the desired amount,
 I must verify if the customer has an active account.
+```
+
 - Give the account_status instance variable to the account class
 - Pass the account_status as an argument to the withdraw method
 - Create a new private method under the ATM class to check the account_status
 
-* As an ATM,
+```
+As an ATM,
 in order to give out the desired amount,
 I must have enough funds.
+```
+
 - Create an instance variable funds for the ATM class that equals the maximum amount the ATM can hold
 - Create a private method under the ATM class to check the ATM funds at any given moment
 
