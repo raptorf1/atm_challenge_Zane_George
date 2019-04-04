@@ -12,6 +12,11 @@ class Person
         @account = Account.new(owner: @name)
     end
 
+    def deposit(money)
+        @cash += money
+        account.balance = @cash
+    end
+
 
 
     private
