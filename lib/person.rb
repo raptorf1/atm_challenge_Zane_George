@@ -16,6 +16,11 @@ class Person
         @account == nil ? deposit_error : succesful_deposit(money)        
     end
 
+    def withdraw_funds (arrg = {})
+        @account == nil ? deposit_error : succesful_withdrawal(arrg)
+    end
+    
+        
 
 
     private
@@ -38,6 +43,21 @@ class Person
         account.balance += money
     end
 
-    
+    def succesful_withdrawal(arrg)
+        arrg[:atm] == nil ? missing_atm : atm = arrg[:atm]
+        pin_number = arrg[:pin]
+        account = @account
+        amount = arrg[:amount]
+        response = atm.withdraw(amount, pin_number, account)
+        response[:status] == true ? increase_cash(response) : response
+    end
+
+    def increase_cash(response)
+        @cash += response[:amount]
+    end
+
+    def missing_atm
+        raise "An ATM is required"
+    end
 
 end

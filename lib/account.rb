@@ -21,7 +21,7 @@ class Account
 
     def set_expire_date
         stringedDate = Date.today.next_year(STANDARD_VALIDITY_YRS).to_s
-        stringedDate[5]+stringedDate[6]+"-"+stringedDate[2]+stringedDate[3]
+        stringedDate[5]+stringedDate[6]+"/"+stringedDate[2]+stringedDate[3]
     end
 
     def assign_pin

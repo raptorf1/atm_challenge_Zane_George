@@ -20,7 +20,7 @@ describe Account do
 
     it "is expected to have an expiry date on initialize" do
         exp_date_toS = Date.today.next_year(5).to_s
-        expected_date = exp_date_toS[5]+exp_date_toS[6]+"-"+exp_date_toS[2]+exp_date_toS[3]
+        expected_date = exp_date_toS[5]+exp_date_toS[6]+"/"+exp_date_toS[2]+exp_date_toS[3]
         expect(subject.exp_date).to eq expected_date
     end
 
