@@ -34,8 +34,8 @@ class Person
     end
 
     def succesful_deposit(money)
-        @cash += money
-        account.balance = @cash
+        @cash -= money
+        account.balance += money
     end
 
     
