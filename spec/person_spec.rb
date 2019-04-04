@@ -2,6 +2,7 @@ require "./lib/person.rb"
 require "./lib/atm.rb"
 require "./lib/account.rb"
 require "date"
+require "pry"
 
 describe Person do
 
@@ -45,8 +46,13 @@ describe Person do
             expect(subject.deposit(100)).to be_truthy
         end
 
-
-
     end
+
+    describe "cannot manage funds if no account has been created" do
+        it "cannot deposit funds" do
+            expect { subject.deposit(100) }.to raise_error(RuntimeError, "No account present")
+        end
+
+        end
 
 end

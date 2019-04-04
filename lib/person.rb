@@ -13,8 +13,7 @@ class Person
     end
 
     def deposit(money)
-        @cash += money
-        account.balance = @cash
+        @account == nil ? deposit_error : succesful_deposit(money)        
     end
 
 
@@ -28,6 +27,15 @@ class Person
 
     def missing_name
         raise "A name is required"
+    end
+
+    def deposit_error
+        raise "No account present"
+    end
+
+    def succesful_deposit(money)
+        @cash += money
+        account.balance = @cash
     end
 
     
