@@ -99,30 +99,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 # Installing
 
-* Run your IRB 
+* Run your IRB
 
 `irb`
  
 * Require Date constant
 
-`
+```ruby
 require "date"
-`
+```
 
 * Load the person.rb file
 
-`
-load '../lib/person.rb'
-`
+```ruby
+load "../lib/person.rb"
+```
+
 * Load atm.rb and account.rb files
 
-`
-load '../lib/atm.rb'
-`
+```ruby
+load "../lib/atm.rb"
+```
 
-`
-load '../lib/account.rb'
-`
+```ruby
+load "../lib/account.rb"
+```
 
 # Running the tests
 
@@ -130,31 +131,37 @@ After you fork the repository, run `bundle install` in your Terminal and make su
 
 Then, from your Terminal go to the project folder and run `rspec`.
 
-
 # Deployment
 
 To create a person, run 
+
+```ruby
+person = Person.new(name: "    ")
 ```
-person = Person.new(name: "George")
-```
+
 To create an accounf for a person, run
-```
+
+```ruby
 person.create_account
 ```
-To deposit money on account of the person, run
-```
+
+To deposit money on the account of the person, run
+
+```ruby
 person.deposit(amount)
 ```
+
 To create an ATM, run
-```
+
+```ruby
 atm = Atm.new
 ```
+
 To withraw funds, run
-```
+
+```ruby
 person.withraw_funds(amount:  , pin:  , atm: atm)
 ```
-
-
 
 # Built With
 
@@ -171,13 +178,10 @@ person.withraw_funds(amount:  , pin:  , atm: atm)
 * **Zane Neikena** - [zanenkn](https://github.com/zanenkn)
 * **George Tomaras** - [raptorf1](https://github.com/raptorf1)
 
-
 # License
 
-This project is completely free for everyone to use and enjoy!
+* **MIT** - https://opensource.org/licenses/MIT
 
 # Acknowledgments
 
-Kudos to PurpleBooth for the README template [https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
-
-
+Kudos to PurpleBooth for the README template https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
