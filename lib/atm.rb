@@ -15,6 +15,8 @@ class Atm
             {status: false, message: "wrong pin", date: Date.today}
         when card_expired?(account.exp_date)
             {status: false, message: "card expired", date: Date.today}
+        when not_divisible_by_5?(amount)
+            {status: false, message: "Amount must be a multiple of 5", date: Date.today}
         when account_disabled?(account.account_status)
             {status: false, message: "account disabled", date: Date.today}
         else
@@ -43,7 +45,11 @@ class Atm
     def account_disabled?(account_status)
         account_status == :disabled
     end
-    
+
+    def not_divisible_by_5?(amount)
+        amount % 5!= 0
+    end
+        
     def perform_transaction(amount, account)
         @funds -= amount
         account.balance -= amount
