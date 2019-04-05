@@ -17,7 +17,10 @@ class Person
     end
 
     def withdraw_funds (arrg = {})
-        @account == nil ? deposit_error : succesful_withdrawal(arrg)
+        if @account == nil then deposit_error
+        elsif @account == :disabled then deposit_error
+        else succesful_withdrawal(arrg)
+        end
     end
     
         
