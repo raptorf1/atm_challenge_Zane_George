@@ -1,6 +1,6 @@
 # Project Title
 
-<p>ATM Challenge_Craft Academy Week 1.</p>
+<p>ATM Challenge - Craft Academy Week 1.</p>
 <p>Simple implementation of an actual ATM with the use of the Ruby language. Only to be run on an Interactive Ruby Shell.</p>
 
 # Problem Statement
@@ -90,85 +90,94 @@ We want to assign each account to a separate person
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on your Interactive Ruby Shell (IRB) system.
 
-### Prerequisites
+# Prerequisites
 
-What things you need to install the software and how to install them
+* You will need Ruby installed on your system.
+* You will need Bundler installed on your system.
+* You will need IRB installed on your system.
 
+
+# Installing
+
+* Run your IRB 
+
+`irb`
+ 
+* Require Date constant
+
+`
+require "date"
+`
+
+* Load the person.rb file
+
+`
+load '../lib/person.rb'
+`
+* Load atm.rb and account.rb files
+
+`
+load '../lib/atm.rb'
+`
+
+`
+load '../lib/account.rb'
+`
+
+# Running the tests
+
+After you fork the repository, run `bundle install` in your Terminal and make sure you are in the project folder. That should install RSPEC on your computer.
+
+Then, from your Terminal go to the project folder and run `rspec`.
+
+
+# Deployment
+
+To create a person, run 
 ```
-Give examples
+person = Person.new(name: "George")
+```
+To create an accounf for a person, run
+```
+person.create_account
+```
+To deposit money on account of the person, run
+```
+person.deposit(amount)
+```
+To create an ATM, run
+```
+atm = Atm.new
+```
+To withraw funds, run
+```
+person.withraw_funds(amount:  , pin:  , atm: atm)
 ```
 
-### Installing
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+# Built With
 
-```
-Give the example
-```
+[Ruby](https://www.ruby-lang.org/en/) - The worlds best programming language.
 
-And repeat
+# Tested With
 
-```
-until finished
-```
+[RSPEC](http://rspec.info) - Making TDD Productive and Fun.
 
-End with an example of getting some data out of the system or using it for a little demo
+[Pry](https://pryrepl.org) - Pry is a powerful alternative to the standard IRB shell for Ruby.
 
-## Running the tests
+# Authors
 
-Explain how to run the automated tests for this system
+* **Zane Neikena** - [zanenkn](https://github.com/zanenkn)
+* **George Tomaras** - [raptorf1](https://github.com/raptorf1)
 
-### Break down into end to end tests
 
-Explain what these tests test and why
+# License
 
-```
-Give an example
-```
+This project is completely free for everyone to use and enjoy!
 
-### And coding style tests
+# Acknowledgments
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Kudos to PurpleBooth for the README template [ https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Kudos to PurpleBooth for the README template [https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
 
 
